@@ -1,0 +1,279 @@
+2025-03-27 13:06:36 Config:
+{'all_joints': [[0], [1], [2], [3]],
+ 'all_joints_names': ['snout', 'tail_fin', 'top', 'bottom'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'contrast': {'clahe': True,
+              'claheratio': 0.1,
+              'histeq': True,
+              'histeqratio': 0.1},
+ 'convolution': {'edge': False,
+                 'emboss': {'alpha': [0.0, 1.0], 'strength': [0.5, 1.5]},
+                 'embossratio': 0.1,
+                 'sharpen': False,
+                 'sharpenratio': 0.3},
+ 'crop_pad': 0,
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets\\iteration-0\\UnaugmentedDataSet_fishMar27\\fish_jfaller95shuffle1.mat',
+ 'dataset_type': 'imgaug',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'engine': 'tensorflow',
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'init_weights': 'C:\\Users\\jfall\\anaconda3\\envs\\DEEPLABCUT\\lib\\site-packages\\deeplabcut\\pose_estimation_tensorflow\\models\\pretrained\\resnet_v1_50.ckpt',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets\\iteration-0\\UnaugmentedDataSet_fishMar27\\Documentation_data-fish_95shuffle1.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'resnet_50',
+ 'num_joints': 4,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'project_path': 'C:\\Users\\jfall\\OneDrive\\Desktop\\Apps\\dlc\\fish-jfaller-2025-03-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'shuffle': True,
+ 'snapshot_prefix': 'C:\\Users\\jfall\\OneDrive\\Desktop\\Apps\\dlc\\fish-jfaller-2025-03-27\\dlc-models\\iteration-0\\fishMar27-trainset95shuffle1\\train\\snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2025-03-27 13:09:51 iteration: 1000 loss: 0.0633 lr: 0.005
+2025-03-27 13:12:09 iteration: 2000 loss: 0.0507 lr: 0.005
+2025-03-27 13:14:06 iteration: 3000 loss: 0.0435 lr: 0.005
+2025-03-27 13:15:53 iteration: 4000 loss: 0.0371 lr: 0.005
+2025-03-27 13:17:35 iteration: 5000 loss: 0.0335 lr: 0.005
+2025-03-27 13:19:17 iteration: 6000 loss: 0.0332 lr: 0.005
+2025-03-27 13:20:50 iteration: 7000 loss: 0.0304 lr: 0.005
+2025-03-27 13:22:26 iteration: 8000 loss: 0.0299 lr: 0.005
+2025-03-27 13:24:01 iteration: 9000 loss: 0.0267 lr: 0.005
+2025-03-27 13:25:32 iteration: 10000 loss: 0.0262 lr: 0.005
+2025-03-27 13:26:58 iteration: 11000 loss: 0.0353 lr: 0.02
+2025-03-27 13:28:21 iteration: 12000 loss: 0.0302 lr: 0.02
+2025-03-27 13:29:46 iteration: 13000 loss: 0.0280 lr: 0.02
+2025-03-27 13:31:06 iteration: 14000 loss: 0.0260 lr: 0.02
+2025-03-27 13:32:34 iteration: 15000 loss: 0.0247 lr: 0.02
+2025-03-27 13:33:53 iteration: 16000 loss: 0.0253 lr: 0.02
+2025-03-27 13:35:16 iteration: 17000 loss: 0.0254 lr: 0.02
+2025-03-27 13:36:38 iteration: 18000 loss: 0.0231 lr: 0.02
+2025-03-27 13:38:10 iteration: 19000 loss: 0.0207 lr: 0.02
+2025-03-27 13:39:40 iteration: 20000 loss: 0.0219 lr: 0.02
+2025-03-27 13:41:15 iteration: 21000 loss: 0.0211 lr: 0.02
+2025-03-27 13:42:36 iteration: 22000 loss: 0.0206 lr: 0.02
+2025-03-27 13:43:50 iteration: 23000 loss: 0.0198 lr: 0.02
+2025-03-27 13:45:08 iteration: 24000 loss: 0.0202 lr: 0.02
+2025-03-27 13:46:23 iteration: 25000 loss: 0.0196 lr: 0.02
+2025-03-27 13:47:47 iteration: 26000 loss: 0.0173 lr: 0.02
+2025-03-27 13:49:06 iteration: 27000 loss: 0.0180 lr: 0.02
+2025-03-27 13:50:28 iteration: 28000 loss: 0.0171 lr: 0.02
+2025-03-29 10:03:24 Config:
+{'all_joints': [[0], [1], [2], [3]],
+ 'all_joints_names': ['snout', 'tail_fin', 'top', 'bottom'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'contrast': {'clahe': True,
+              'claheratio': 0.1,
+              'histeq': True,
+              'histeqratio': 0.1},
+ 'convolution': {'edge': False,
+                 'emboss': {'alpha': [0.0, 1.0], 'strength': [0.5, 1.5]},
+                 'embossratio': 0.1,
+                 'sharpen': False,
+                 'sharpenratio': 0.3},
+ 'crop_pad': 0,
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets\\iteration-0\\UnaugmentedDataSet_fishMar27\\fish_jfaller95shuffle1.mat',
+ 'dataset_type': 'imgaug',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'engine': 'tensorflow',
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'init_weights': 'C:\\Users\\jfall\\anaconda3\\envs\\DEEPLABCUT\\lib\\site-packages\\deeplabcut\\pose_estimation_tensorflow\\models\\pretrained\\resnet_v1_50.ckpt',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets\\iteration-0\\UnaugmentedDataSet_fishMar27\\Documentation_data-fish_95shuffle1.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'resnet_50',
+ 'num_joints': 4,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'project_path': 'C:\\Users\\jfall\\OneDrive\\Desktop\\Apps\\dlc\\fish-jfaller-2025-03-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'shuffle': True,
+ 'snapshot_prefix': 'C:\\Users\\jfall\\OneDrive\\Desktop\\Apps\\dlc\\fish-jfaller-2025-03-27\\dlc-models\\iteration-0\\fishMar27-trainset95shuffle1\\train\\snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2025-03-29 10:05:31 iteration: 1000 loss: 0.0626 lr: 0.005
+2025-03-29 10:06:51 iteration: 2000 loss: 0.0498 lr: 0.005
+2025-03-29 10:07:55 iteration: 3000 loss: 0.0440 lr: 0.005
+2025-03-29 10:08:53 iteration: 4000 loss: 0.0378 lr: 0.005
+2025-03-29 10:09:46 iteration: 5000 loss: 0.0333 lr: 0.005
+2025-03-29 10:10:46 iteration: 6000 loss: 0.0326 lr: 0.005
+2025-03-29 10:11:41 iteration: 7000 loss: 0.0311 lr: 0.005
+2025-03-29 10:12:32 iteration: 8000 loss: 0.0292 lr: 0.005
+2025-03-29 10:13:27 iteration: 9000 loss: 0.0268 lr: 0.005
+2025-03-29 10:14:15 iteration: 10000 loss: 0.0260 lr: 0.005
+2025-03-29 10:14:58 iteration: 11000 loss: 0.0367 lr: 0.02
+2025-03-29 10:15:38 iteration: 12000 loss: 0.0302 lr: 0.02
+2025-03-29 10:16:21 iteration: 13000 loss: 0.0283 lr: 0.02
+2025-03-29 10:17:04 iteration: 14000 loss: 0.0258 lr: 0.02
+2025-03-29 10:17:44 iteration: 15000 loss: 0.0252 lr: 0.02
+2025-03-29 10:18:23 iteration: 16000 loss: 0.0254 lr: 0.02
+2025-03-29 10:19:05 iteration: 17000 loss: 0.0242 lr: 0.02
+2025-03-29 10:19:42 iteration: 18000 loss: 0.0233 lr: 0.02
+2025-03-29 10:20:20 iteration: 19000 loss: 0.0211 lr: 0.02
+2025-03-29 10:21:00 iteration: 20000 loss: 0.0213 lr: 0.02
+2025-03-29 10:21:39 iteration: 21000 loss: 0.0205 lr: 0.02
+2025-03-29 10:22:19 iteration: 22000 loss: 0.0217 lr: 0.02
+2025-03-29 10:22:55 iteration: 23000 loss: 0.0205 lr: 0.02
+2025-03-29 10:23:31 iteration: 24000 loss: 0.0198 lr: 0.02
+2025-03-29 10:24:08 iteration: 25000 loss: 0.0199 lr: 0.02
+2025-03-29 10:24:47 iteration: 26000 loss: 0.0178 lr: 0.02
+2025-03-29 10:25:22 iteration: 27000 loss: 0.0183 lr: 0.02
+2025-03-29 10:25:58 iteration: 28000 loss: 0.0185 lr: 0.02
+2025-03-29 10:26:32 iteration: 29000 loss: 0.0178 lr: 0.02
+2025-03-29 10:27:11 iteration: 30000 loss: 0.0198 lr: 0.02
+2025-03-29 10:27:41 iteration: 31000 loss: 0.0157 lr: 0.02
+2025-03-29 10:28:17 iteration: 32000 loss: 0.0176 lr: 0.02
+2025-03-29 10:28:51 iteration: 33000 loss: 0.0173 lr: 0.02
+2025-03-29 10:29:26 iteration: 34000 loss: 0.0161 lr: 0.02
+2025-03-29 10:30:02 iteration: 35000 loss: 0.0154 lr: 0.02
+2025-03-29 10:30:39 iteration: 36000 loss: 0.0168 lr: 0.02
+2025-03-29 10:31:14 iteration: 37000 loss: 0.0154 lr: 0.02
+2025-03-29 10:31:51 iteration: 38000 loss: 0.0153 lr: 0.02
+2025-03-29 10:32:26 iteration: 39000 loss: 0.0159 lr: 0.02
+2025-03-29 10:33:00 iteration: 40000 loss: 0.0149 lr: 0.02
+2025-03-29 10:33:33 iteration: 41000 loss: 0.0143 lr: 0.02
+2025-03-29 10:34:06 iteration: 42000 loss: 0.0150 lr: 0.02
+2025-03-29 10:34:45 iteration: 43000 loss: 0.0158 lr: 0.02
+2025-03-29 10:35:19 iteration: 44000 loss: 0.0140 lr: 0.02
+2025-03-29 10:35:55 iteration: 45000 loss: 0.0148 lr: 0.02
+2025-03-29 10:36:28 iteration: 46000 loss: 0.0138 lr: 0.02
+2025-03-29 10:37:04 iteration: 47000 loss: 0.0137 lr: 0.02
+2025-03-29 10:37:41 iteration: 48000 loss: 0.0156 lr: 0.02
+2025-03-29 10:38:17 iteration: 49000 loss: 0.0139 lr: 0.02
+2025-03-29 10:38:50 iteration: 50000 loss: 0.0147 lr: 0.02
+2025-03-29 10:39:23 iteration: 51000 loss: 0.0137 lr: 0.02
+2025-03-29 10:39:57 iteration: 52000 loss: 0.0154 lr: 0.02
+2025-03-29 10:40:30 iteration: 53000 loss: 0.0133 lr: 0.02
+2025-03-29 10:41:03 iteration: 54000 loss: 0.0135 lr: 0.02
+2025-03-29 10:41:37 iteration: 55000 loss: 0.0141 lr: 0.02
+2025-03-29 10:42:13 iteration: 56000 loss: 0.0143 lr: 0.02
+2025-03-29 10:42:47 iteration: 57000 loss: 0.0133 lr: 0.02
+2025-03-29 10:43:22 iteration: 58000 loss: 0.0129 lr: 0.02
+2025-03-29 10:43:55 iteration: 59000 loss: 0.0127 lr: 0.02
+2025-03-29 10:44:30 iteration: 60000 loss: 0.0131 lr: 0.02
+2025-03-29 10:45:02 iteration: 61000 loss: 0.0130 lr: 0.02
+2025-03-29 10:45:34 iteration: 62000 loss: 0.0127 lr: 0.02
+2025-03-29 10:46:09 iteration: 63000 loss: 0.0131 lr: 0.02
+2025-03-29 10:46:42 iteration: 64000 loss: 0.0122 lr: 0.02
+2025-03-29 10:47:13 iteration: 65000 loss: 0.0131 lr: 0.02
+2025-03-29 10:47:46 iteration: 66000 loss: 0.0115 lr: 0.02
+2025-03-29 10:48:19 iteration: 67000 loss: 0.0125 lr: 0.02
+2025-03-29 10:48:52 iteration: 68000 loss: 0.0135 lr: 0.02
+2025-03-29 10:49:28 iteration: 69000 loss: 0.0129 lr: 0.02
+2025-03-29 10:50:00 iteration: 70000 loss: 0.0117 lr: 0.02
+2025-03-29 10:50:31 iteration: 71000 loss: 0.0125 lr: 0.02
+2025-03-29 10:51:07 iteration: 72000 loss: 0.0128 lr: 0.02
+2025-03-29 10:51:41 iteration: 73000 loss: 0.0118 lr: 0.02
+2025-03-29 10:52:14 iteration: 74000 loss: 0.0119 lr: 0.02
+2025-03-29 10:52:45 iteration: 75000 loss: 0.0120 lr: 0.02
+2025-03-29 10:53:18 iteration: 76000 loss: 0.0118 lr: 0.02
+2025-03-29 10:53:49 iteration: 77000 loss: 0.0109 lr: 0.02
+2025-03-29 10:54:22 iteration: 78000 loss: 0.0135 lr: 0.02
+2025-03-29 10:54:52 iteration: 79000 loss: 0.0114 lr: 0.02
+2025-03-29 10:55:24 iteration: 80000 loss: 0.0115 lr: 0.02
+2025-03-29 10:55:56 iteration: 81000 loss: 0.0119 lr: 0.02
+2025-03-29 10:56:28 iteration: 82000 loss: 0.0116 lr: 0.02
+2025-03-29 10:57:01 iteration: 83000 loss: 0.0116 lr: 0.02
+2025-03-29 10:57:36 iteration: 84000 loss: 0.0118 lr: 0.02
+2025-03-29 10:58:09 iteration: 85000 loss: 0.0119 lr: 0.02
+2025-03-29 10:58:40 iteration: 86000 loss: 0.0111 lr: 0.02
+2025-03-29 10:59:12 iteration: 87000 loss: 0.0111 lr: 0.02
+2025-03-29 10:59:43 iteration: 88000 loss: 0.0112 lr: 0.02
+2025-03-29 11:00:14 iteration: 89000 loss: 0.0116 lr: 0.02
+2025-03-29 11:00:47 iteration: 90000 loss: 0.0109 lr: 0.02
+2025-03-29 11:01:18 iteration: 91000 loss: 0.0110 lr: 0.02
+2025-03-29 11:01:56 iteration: 92000 loss: 0.0121 lr: 0.02
+2025-03-29 11:02:29 iteration: 93000 loss: 0.0106 lr: 0.02
+2025-03-29 11:03:01 iteration: 94000 loss: 0.0106 lr: 0.02
+2025-03-29 11:03:31 iteration: 95000 loss: 0.0105 lr: 0.02
+2025-03-29 11:04:03 iteration: 96000 loss: 0.0112 lr: 0.02
+2025-03-29 11:04:34 iteration: 97000 loss: 0.0109 lr: 0.02
+2025-03-29 11:05:06 iteration: 98000 loss: 0.0114 lr: 0.02
+2025-03-29 11:05:36 iteration: 99000 loss: 0.0101 lr: 0.02
+2025-03-29 11:06:06 iteration: 100000 loss: 0.0103 lr: 0.02
+2025-03-29 11:06:07 Selecting single-animal trainer
+2025-03-29 11:06:07 Batch Size is 1
+2025-03-29 11:06:07 Loading ImageNet-pretrained
+2025-03-29 11:06:07  
+2025-03-29 11:06:07 resnet_50
+2025-03-29 11:06:07 Max_iters overwritten as
+2025-03-29 11:06:07  
+2025-03-29 11:06:07 100000
+2025-03-29 11:06:07 Display_iters overwritten as
+2025-03-29 11:06:07  
+2025-03-29 11:06:07 1000
+2025-03-29 11:06:07 Save_iters overwritten as
+2025-03-29 11:06:07  
+2025-03-29 11:06:07 50000
+2025-03-29 11:06:07 Training parameter:
+2025-03-29 11:06:07 {'stride': 8.0, 'weigh_part_predictions': False, 'weigh_negatives': False, 'fg_fraction': 0.25, 'mean_pixel': [123.68, 116.779, 103.939], 'shuffle': True, 'snapshot_prefix': 'C:\\Users\\jfall\\OneDrive\\Desktop\\Apps\\dlc\\fish-jfaller-2025-03-27\\dlc-models\\iteration-0\\fishMar27-trainset95shuffle1\\train\\snapshot', 'log_dir': 'log', 'global_scale': 0.8, 'location_refinement': True, 'locref_stdev': 7.2801, 'locref_loss_weight': 0.05, 'locref_huber_loss': True, 'optimizer': 'sgd', 'intermediate_supervision': False, 'intermediate_supervision_layer': 12, 'regularize': False, 'weight_decay': 0.0001, 'crop_pad': 0, 'scoremap_dir': 'test', 'batch_size': 1, 'dataset_type': 'imgaug', 'deterministic': False, 'mirror': False, 'pairwise_huber_loss': False, 'weigh_only_present_joints': False, 'partaffinityfield_predict': False, 'pairwise_predict': False, 'all_joints': [[0], [1], [2], [3]], 'all_joints_names': ['snout', 'tail_fin', 'top', 'bottom'], 'alpha_r': 0.02, 'apply_prob': 0.5, 'contrast': {'clahe': True, 'claheratio': 0.1, 'histeq': True, 'histeqratio': 0.1, 'gamma': False, 'sigmoid': False, 'log': False, 'linear': False}, 'convolution': {'edge': False, 'emboss': {'alpha': [0.0, 1.0], 'strength': [0.5, 1.5]}, 'embossratio': 0.1, 'sharpen': False, 'sharpenratio': 0.3}, 'cropratio': 0.4, 'dataset': 'training-datasets\\iteration-0\\UnaugmentedDataSet_fishMar27\\fish_jfaller95shuffle1.mat', 'decay_steps': 30000, 'display_iters': 1000, 'engine': 'tensorflow', 'init_weights': 'C:\\Users\\jfall\\anaconda3\\envs\\DEEPLABCUT\\lib\\site-packages\\deeplabcut\\pose_estimation_tensorflow\\models\\pretrained\\resnet_v1_50.ckpt', 'lr_init': 0.0005, 'max_input_size': 1500, 'metadataset': 'training-datasets\\iteration-0\\UnaugmentedDataSet_fishMar27\\Documentation_data-fish_95shuffle1.pickle', 'min_input_size': 64, 'multi_stage': False, 'multi_step': [[0.005, 10000], [0.02, 430000], [0.002, 730000], [0.001, 1030000]], 'net_type': 'resnet_50', 'num_joints': 4, 'pos_dist_thresh': 17, 'project_path': 'C:\\Users\\jfall\\OneDrive\\Desktop\\Apps\\dlc\\fish-jfaller-2025-03-27', 'rotation': 25, 'rotratio': 0.4, 'save_iters': 50000, 'scale_jitter_lo': 0.5, 'scale_jitter_up': 1.25, 'covering': True, 'elastic_transform': True, 'motion_blur': True, 'motion_blur_params': {'k': 7, 'angle': (-90, 90)}}
+2025-03-29 11:06:07 Starting training....
+2025-03-29 11:06:07 The network is now trained and ready to evaluate. Use the function 'evaluate_network' to evaluate the network.
+2025-03-29 15:24:19 Exiting...

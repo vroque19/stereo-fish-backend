@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+ENV/
+env/
+.venv/
+
+# VS Code settings (if you use it)
+.vscode/
+
+# macOS junk
+.DS_Store
+
+# Logs and system files
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python environment files
+*.env
+*.venv
+
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pytest
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.cache
+
+# PyInstaller
+dist/
+build/
+*.spec
+
+# Test results
+junit.xml
