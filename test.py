@@ -1,16 +1,9 @@
 from fastapi.testclient import TestClient
-from dotenv import load_dotenv
-from main import app
-import os
+from main import app, get_secret
 import io
 
 
-SECRET = os.environ.get("SECRET_KEY")
-
 client = TestClient(app)
-
-def get_secret():
-    return os.environ.get("SECRET_KEY")
 
 def test_whoami():
     SECRET = get_secret()
@@ -31,6 +24,6 @@ def test_upload_image():
       print(response.text)
       print("Status Code:", response.status_code)
       print("Response Body:", response.json())
-      
+
 test_whoami()
 test_upload_image()

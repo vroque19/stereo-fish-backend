@@ -10,6 +10,10 @@ SECRET = os.environ.get("SECRET_KEY")
 UPLOAD_DIRECTORY = "./static/uploaded_images"
 os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)
 
+def get_secret():
+    return os.environ.get("SECRET_KEY")
+
+
 @app.get("/")
 def read_root():
   return {"Hello": "World"}
