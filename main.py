@@ -3,13 +3,13 @@ from fastapi.responses import JSONResponse
 from typing import Annotated, List, Tuple
 from dotenv import load_dotenv
 import os
-from dlc import compute_points_from_image
+from dlc import compute_points_from_image, calc_dimensions
 from pydantic import BaseModel
 
-load_dotenv()
-app = FastAPI()
 SECRET = os.environ.get("SECRET_KEY")
 UPLOAD_DIRECTORY = "./static/uploaded_images"
+load_dotenv()
+app = FastAPI()
 os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)
 
 
@@ -77,13 +77,14 @@ async def upload_image(
             raise HTTPException(status_code=500, detail=f"File save error: {str(e)}")
 
         try:
-            points, dimensions = compute_points_from_image()
+            points = compute_points_from_image()
+            dimensions = calc_dimensions(points)
             response = DimResponse(points=points, dimensions=dimensions)
             return response
         except Exception as e:
             import traceback
 
-            print(f"Error in compute_points_from_image: {str(e)}")
+            print(f"Error in computing points and dimensions: {str(e)}")
             print(traceback.format_exc())
             raise HTTPException(status_code=500, detail=f"Analysis error: {str(e)}")
 

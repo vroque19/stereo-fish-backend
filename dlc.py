@@ -73,17 +73,19 @@ def compute_points_from_image():
         (top_x, top_y),
         (bottom_x, bottom_y),
     ]
-    length_cm, width_cm, _, _ = calc_dimensions(
-        snout_x, snout_y, tail_fin_x, tail_fin_y, top_x, top_y, bottom_x, bottom_y
-    )
+
     print("List of points: ", list_of_points)
 
-    return list_of_points, [(length_cm, width_cm)]
+    return list_of_points
 
 
-def calc_dimensions(
-    snout_x, snout_y, tail_fin_x, tail_fin_y, top_x, top_y, bottom_x, bottom_y
-):
+def calc_dimensions(list_of_points):
+    (
+        (snout_x, snout_y),
+        (tail_fin_x, tail_fin_y),
+        (top_x, top_y),
+        (bottom_x, bottom_y),
+    ) = list_of_points
     # Calculate real-world width and height at the given depth
     real_width = 2 * depth * math.tan(math.radians(fov_h / 2))
     real_height = 2 * depth * math.tan(math.radians(fov_v / 2))
@@ -103,5 +105,5 @@ def calc_dimensions(
     # Convert width to real-world units
     width_cm = width_pixels * y_conversion_factor
     width_in = width_cm / 2.54
-
-    return length_cm, length_in, width_cm, width_in
+    print(f"dimensions: {length_cm}x{width_cm}")
+    return [(length_cm, width_cm)]
