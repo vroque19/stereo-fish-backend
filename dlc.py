@@ -1,19 +1,20 @@
 import deeplabcut
 import math
-import cv2
 import os
 import pandas as pd
 import glob
 
 # Camera params
-depth = 50  # Example depth in cm
-fov_h = 60  # Example horizontal field of view in degrees
-fov_v = 40  # Example vertical field of view in degrees
-sensor_width = 6.3  # Example sensor width in mm
-sensor_height = 4.7  # Example sensor height in mm
-image_width = 1280  # Example image width in pixels
-image_height = 720  # Example image height in pixels
-
+depth = 50  # depth in cm
+fov_h = 63.7  # horizontal field of view in degrees
+fov_v = 70  # vertical field of view in degrees
+sensor_width = 3.674  # sensor width in mm
+sensor_height = 2.76  # sensor height in mm
+image_width = 1280 // 2  # image width in pixels
+image_height = 480 // 2  # image height in pixels
+# Needed to fix errors, need to figure out why
+adj_l = 1.244356955  # Adjustment param length
+adj_w = 2.559055118  # Adjustment param width
 
 # Root path
 root = "/home/ubuntu/repos/stereo-cam-backend/"
@@ -103,7 +104,7 @@ def calc_dimensions(list_of_points):
     # Calculate width in pixels
     width_pixels = math.sqrt((bottom_x - top_x) ** 2 + (bottom_y - top_y) ** 2)
     # Convert width to real-world units
-    width_cm = width_pixels * y_conversion_factor
+    width_cm = width_pixels * y_conversion_factor / adj_w
     width_in = width_cm / 2.54
     print(f"dimensions: {length_cm}x{width_cm}")
     return [(length_cm, width_cm)]
