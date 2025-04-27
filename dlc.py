@@ -34,12 +34,22 @@ def clean_image_folder():
 def compute_points_from_image():
 
     # Saves as csv
-    deeplabcut.analyze_time_lapse_frames(
-        config_path,
-        image_folder,
-        frametype=".jpg",
-        save_as_csv=True,
-    )
+    if any(f.lower().endswith(".jpg") for f in os.listdir(image_folder)):
+        deeplabcut.analyze_time_lapse_frames(
+            config_path,
+            image_folder,
+            frametype=".jpg",
+            save_as_csv=True,
+        )
+
+    # Process PNG files
+    if any(f.lower().endswith(".png") for f in os.listdir(image_folder)):
+        deeplabcut.analyze_time_lapse_frames(
+            config_path,
+            image_folder,
+            frametype=".png",
+            save_as_csv=True,
+        )
     # List all CSV files in the image_folder
     csv_fn = glob.glob(os.path.join(image_folder, "*.csv"))
     if not csv_fn:
